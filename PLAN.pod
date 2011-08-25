@@ -1,0 +1,47 @@
+=head1 NAME
+
+GopfTool Plan - Implementation Plan for GopfTool
+
+=head1 SYNOPSIS
+
+This document describes the components required to implement GopfTool.
+
+=head1 Components
+
+=head2 Gopf GUI
+
+Gopf client for writing problem reports with configurable controls
+as discribed in the L<README>.
+
+Implemented in wxPerl. The client should run on Linux, Windows and OSX.
+
+=head2 Gopf Data Acquisition Plugins
+
+Client Side Modules for acquiring additional client data deeped helpful to
+the IT staff dealing with the incoming problem reports.
+
+Initial platform focus for plugins is windows.
+
+=head2 Gopf Client Build
+
+Build standalone windows binaries. Try using staticperl or PAR (with strawberry perl) for this task.
+
+=head2 Gopf Server
+
+Provide configuration service to Gopf clients and handle incoming messages.
+
+Implement using Mojolicious, use REST for communication.
+
+=head2 Gopf Frontend
+
+Provide statistical evaluation for the messages received. Use google
+analytics interface for inspiration. Implement in Qooxdoo.
+
+=head1 AUTHOR
+
+Tobi Oetiker E<lt>tobi@oetiker.chE<gt>
+
+=head1 HISTORY
+
+ 2011-08-25 Initial Version
+
